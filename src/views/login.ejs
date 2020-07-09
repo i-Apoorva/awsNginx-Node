@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Nodejs + Cognito</h2>
+    <h2>Nginx logs view application</h2>
+    <% if (locals.errors) { %>
+        <p style="color:red"> <%= errors.message %> </p>
+    <% } %>
+    <div>
+    <h3><b>Login:</b></h3>
+    <form action='/auth/login' method="POST">
+        <div>
+            <label>username:</label>
+            <input type="text" name="username"/>
+        </div>
+        <div>
+            <label>password:</label>
+            <input type="password" name="password"/>
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+        <a href="/signup"> or signup as a new user</a>
+    </div>
+</body>
+</html>

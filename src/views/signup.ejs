@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h3>Signup:</h3>
+    <form action='/auth/register' method="POST">
+        <div>
+            <label>username(email):</label>
+            <input type="email" name="name" />
+        </div>
+        <!-- <div>
+            <label>email:</label>
+            <input type="email" name="email" />
+        </div> -->
+        <div>
+            <label>password:</label>
+            <input type="password" name="password"/>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <a href="/login"> or login as existing user</a>
+</div>
+</body>
+</html>

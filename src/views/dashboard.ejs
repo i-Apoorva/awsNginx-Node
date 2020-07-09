@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/auth/signout" method="POST">
+    <button type="submit">Signout </button>
+    </form>
+    <h2>NGINX logs view dashboard</h2>
+    <% if(entries.length > 0) { %>
+        <h3>NGINX LOGS:</h3>
+        <ol>
+            <% entries.forEach(function(entry) { %>
+                <li><%= entry %></li>
+            <% }); %>
+        </ol>
+        <% } else { %>
+           <p>No results to show.</p>
+        <% } %>
+</body>
+</html>
