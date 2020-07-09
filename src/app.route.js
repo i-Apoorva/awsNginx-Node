@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
 router.get('/dashboard', authMiddleware.Validate, async (req, res) => {
     try {
         const entries = await readLog();
-        res.render('dashboard', {entries: entries});
+        console.log(entries.length,{entries})
+        res.render('dashboard', {entries});
     } catch(err) { res.sendStatus(500); }
 });
 
