@@ -24,6 +24,7 @@ Task 2 Solution:
 
 Problem can be with redirection of HTTP traffic to HTTPS. I will be needing different instances to handle the requests.
 By Using ELB we can create a scalable solution for our app, which will provide us autoscaling, health check, load distribution and hence redundancy. We can use elastic bean stalk to deploy the application.
+ALB (Application load balancer can be used, set up as such to make sure all requests from the same client end up on the server.
 
 
 
