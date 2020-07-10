@@ -9,7 +9,11 @@ The API routes includes:
 1. /login :- It is used to land to dashboard page to view the nginx logs. 
 2. /signup :- You need to signup using email address, set the password. Then will be redirected to verify page and will receive verification email. You will be required to verify your email first before login.
 3. /dashboard :- It provides list view to view the logs of nginx server. Logs are sorted for newest logs to be seen first.
+
 4./dashboard/filter :- This path is used to send queries to filter out the logs on the basis of date, IP etc.
+
+# Authentication - Authorization- 
+AWS Cognito
 
 
 
