@@ -1,6 +1,6 @@
 # awsNginx-Node App
 
-Task 1:
+Task 1 Solution:
 
 This repository holds code for Node.js application to view Nginx Logs. The application is running on EC2 ubuntu instance.
 
