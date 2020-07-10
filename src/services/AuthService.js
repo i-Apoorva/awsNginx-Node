@@ -42,17 +42,18 @@ exports.Login = function (body, callback) {
          Pool: userPool
      }
      
+
      var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
      cognitoUser.authenticateUser(authenticationDetails, {
          onSuccess: function (result) {
             var accesstoken = result.getAccessToken().getJwtToken();
             callback(null, accesstoken);
          },
-         onFailure: (function (err) {
+         onFailure: function (err) {
             callback(err);
+         }
         })
-    })
- };
+     };
 
  exports.Validate = function(token, callback){
     request({
@@ -102,9 +103,9 @@ exports.Login = function (body, callback) {
  exports.Signout= function (body, callback) {
     var cognitoUser = userPool.getCurrentUser();
     if (cognitoUser != null) {
-        cognitoUser.signOut();
-    }
-      callback(null, true);
+        cognitoUser.signOut({global:true});
+    }  
+    callback(null, true)
  }
  
 

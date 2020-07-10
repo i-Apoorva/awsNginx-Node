@@ -37,20 +37,22 @@ exports.Validate = function (req, res, next) {
             if (!decodedJwt) {
                 console.log("Not a valid JWT token");
                 res.status(401);
-                return res.send("Invalid token");
+                return res.redirect('/login')
+                
             }
             var kid = decodedJwt.header.kid;
             var pem = pems[kid];
             if (!pem) {
                 console.log('Invalid token');
-                res.status(401);
-                return res.send("Invalid token");
+                //res.status(401);
+                return res.redirect('/login')
+                
             }
             jsonwebtoken.verify(token, pem, function (err, payload) {
                 if (err) {
                     console.log("Invalid Token.");
-                    res.status(401);
-                    return res.send("Invalid tokern");
+                    return res.redirect('/login')
+                
                 } else {
                     console.log("Valid Token.");
                     return next();

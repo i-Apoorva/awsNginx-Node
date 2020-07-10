@@ -1,7 +1,7 @@
 var authService = require('../services/AuthService');
 
 exports.register = function(req, res){
-    let register = authService.Register(req.body, function(err, result){
+    authService.Register(req.body, function(err, result){
     if(err){
         return res.send(err.message);
     }
@@ -10,7 +10,7 @@ exports.register = function(req, res){
 }
 
 exports.login = function(req, res){
-    let login = authService.Login(req.body, function(err, result){
+    authService.Login(req.body, function(err, result){
         if(err){
           return res.render('login', {
                errors: err
@@ -37,7 +37,7 @@ exports.login = function(req, res){
 };
 
  exports.validate_token = function(req, res){
-    let validate = authService.Validate(req.body.token,function(err, result){
+    authService.Validate(req.body.token,function(err, result){
         if(err)
             res.send(err.message);
         res.send(result);
@@ -45,10 +45,11 @@ exports.login = function(req, res){
 }
 
 exports.signout = function(req, res){
-    let signout = authService.Signout(req.body, function(err, result){
+   authService.Signout(req.body, function(err, result){
         if(err){
+            console.log('signout msg err', err.message)
             return res.send(err.message);
         }
-        res.render('login');
+        res.redirect('/login');
       })
  }

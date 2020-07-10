@@ -18,5 +18,4 @@ app.use(bodyParser.json());
 app.use(baseRoutes);
 app.use('/',routes)
 
-
 module.exports = app;
