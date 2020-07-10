@@ -6,7 +6,6 @@ var authMiddleware = require('./middleware/authMiddleware');
 router.get('/', (req, res) => {
     res.render('login');
 });
-
 router.get('/dashboard', authMiddleware.Validate, logsController.readLog)
 router.get('/dashboard/filter', authMiddleware.Validate, logsController.filterLog)
 
