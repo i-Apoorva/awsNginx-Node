@@ -10,10 +10,12 @@
     <button type="submit">Signout </button>
     </form>
     <h2>NGINX logs view dashboard</h2>
+    
     <% if(entries && entries.length >0) { %>
+        <p style="color:green"> To filter logs by IP or/and date. Please go to dashboard/filter? and pass queries.</p>
         <h3>NGINX LOGS:</h3>
         <ol>
-            <% entries.forEach(function(entry) { %>
+            <% entries.forEach((entry) =>{ %>
                 <li><%= entry %></li>
             <% }); %>
         </ol>
