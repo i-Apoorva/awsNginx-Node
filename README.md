@@ -1,7 +1,5 @@
 # awsNginx-Node App
 
-Task 1 Solution:
-
 This repository holds code for Node.js application to view Nginx Logs. The application is running on EC2 ubuntu instance.
 
 The application can be accessed by going to the link: http://ec2-3-18-215-194.us-east-2.compute.amazonaws.com/
@@ -18,7 +16,6 @@ The API routes includes:
 AWS Cognito
 
 
-Task 2 Solution:
 - What problems will your application face when ELB(load balancer) is used to route requests?
 - Suggest a scalable solution when ELB (Elastic load balancer) is used. 
 
