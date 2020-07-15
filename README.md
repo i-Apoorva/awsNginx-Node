@@ -13,15 +13,15 @@ The API routes includes:
 4./dashboard/filter :- This path is used to send queries to filter out the logs on the basis of date, IP etc.
 
 # Authentication - Authorization- 
-AWS Cognito
+AWS Cognito is used.
 
-
+# scaling
 - What problems will your application face when ELB(load balancer) is used to route requests?
 - Suggest a scalable solution when ELB (Elastic load balancer) is used. 
 
 Problem can be with redirection of HTTP traffic to HTTPS. I will be needing different instances to handle the requests.
 By Using ELB we can create a scalable solution for our app, which will provide us autoscaling, health check, load distribution and hence redundancy. We can use elastic bean stalk to deploy the application.
-ALB (Application load balancer can be used, set up as such to make sure all requests from the same client end up on the server.
+ALB (Application load balancer can be used, set up as such to make sure all requests from the same client end up on the same server.
 
 
 
