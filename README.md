@@ -15,6 +15,9 @@ The API routes includes:
 # Authentication - Authorization- 
 AWS Cognito is used.
 
+# PM2
+PM2 is a daemon process manager that will help you manage and keep your application online. It is being used to manage instances of the application and application stays online even if we make changes to the application.
+
 # scaling
 - What problems will your application face when ELB(load balancer) is used to route requests?
 - Suggest a scalable solution when ELB (Elastic load balancer) is used. 
