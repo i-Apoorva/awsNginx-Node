@@ -19,10 +19,6 @@ AWS Cognito is used.
 PM2 is a daemon process manager that will help you manage and keep your application online. It is being used to manage instances of the application and application stays online even if we make changes to the application.
 
 # scaling
-- What problems will your application face when ELB(load balancer) is used to route requests?
-- Suggest a scalable solution when ELB (Elastic load balancer) is used. 
-
-Problem can be with redirection of HTTP traffic to HTTPS. I will be needing different instances to handle the requests.
 By Using ELB we can create a scalable solution for our app, which will provide us autoscaling, health check, load distribution and hence redundancy. We can use elastic bean stalk to deploy the application.
 ALB (Application load balancer can be used, set up as such to make sure all requests from the same client end up on the same server.
 
